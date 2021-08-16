@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Words(</title>
+</head>
+<body>
+    <script>
+
+function words(n, product) {
+    var result;
+    count = n % 100;
+    if (count >= 5 && count <= 20) {
+        result = product['2'];
+    } else {
+        count = count % 10;
+        if (count == 1) {
+            result = product['0'];
+        } else if (count >= 2 && count <= 4) {
+            result = product['1'];
+        } else {
+            result = product['2'];
+        }
+    }
+    return result;
+}
+ 
+console.log ( words(1, ['товар','товара','товаров'])  );
+console.log ( words(2, ['товар','товара','товаров'])  );
+console.log ( words(5, ['товар','товара','товаров'])  );
+
+    </script>
+</body>
+</html>
